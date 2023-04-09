@@ -47,7 +47,7 @@ public class DatasetInputModel implements InputModel<Dataset> {
 
 	@Override
 	public Optional<Dataset> toDomainEntity(String... params) {
-		UUID id = params.length == 1 ? UUID.randomUUID() : UUID.fromString(params[1]);
+		String id = params.length == 1 ? UUID.randomUUID().toString() : params[1];
 		return (params.length != 1 && !params[1].equals(this.id)) || taxon_id == null || schema_id == null ? Optional.empty() :
 				Optional.of(new Dataset(params[0], id.toString(), description, taxon_id, schema_id));
 	}

@@ -93,10 +93,10 @@ public class NewickFormatter extends TreeFormatter {
 		newick.delete(0, info.length());
 		String[] values = info.split(":", -1);
 		if (values.length > 1) {
-			if (newick.indexOf(";") == 0 || values.length > 2 || !values[1].matches("[\\d]*") || values[0].isEmpty())
+			if (newick.indexOf(";") == 0 || values.length > 2 || !values[1].matches("[\\d]+(\\.[\\d]+)?") || values[0].isEmpty())
 				return null;
 			VersionedEntity<Profile.PrimaryKey> to = new VersionedEntity<>(new Profile.PrimaryKey(projectId, datasetId, values[0]), CURRENT_VERSION_VALUE, false);
-			Edge edge = new Edge(null, to, Long.parseLong(values[1]));
+			Edge edge = new Edge(null, to, (long) Double.parseDouble(values[1]));
 			levels.peek().add(edge);
 			aux.add(edge);
 			return values[0];

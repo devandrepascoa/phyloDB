@@ -170,7 +170,7 @@ public class ProfileService extends BatchService<Profile, Profile.PrimaryKey> {
 		List<String> invalids = new ArrayList<>();
 		List<Profile> profiles = parsed.getKey(), toSave = new ArrayList<>();
 		for (Profile profile : profiles) {
-			if (canSave.test(profile) && verifyAlleles(profile.getAllelesReferences())) {
+			if (canSave.test(profile)) {
 				toSave.add(profile);
 				continue;
 			}

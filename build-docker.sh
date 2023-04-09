@@ -31,7 +31,7 @@ echo ""
 
 if [ ! -f "$PROJ_ROOT/phylodb/build/libs/phylodb-1.0.0.jar" ] ; then
     cd "phylodb"
-    gradle bootJar
+    ./gradlew bootJar
     cd "$PROJ_ROOT"
 else
     echo "> Found: algorithms-1.0.jar, skipping build."
@@ -66,11 +66,11 @@ fi
 
 
 # Get Neo4j's APOC JAR files.
-if [ ! -f "$PLUGINS_DIR/apoc-4.4.0.5-all.jar" ] ; then
+if [ ! -f "$PLUGINS_DIR/apoc-4.4.0.13-all.jar" ] ; then
     echo ""
-    echo "> Dowloading apoc-4.4.0.5-all.jar."
+    echo "> Dowloading apoc-4.4.0.13-all.jar."
     cd "$PLUGINS_DIR"
-    wget "https://github.com/neo4j-contrib/neo4j-apoc-procedures/releases/download/4.4.0.5/apoc-4.4.0.5-all.jar"
+    wget "https://github.com/neo4j-contrib/neo4j-apoc-procedures/releases/download/4.4.0.13/apoc-4.4.0.13-all.jar"
     cd "$PROJ_ROOT"
     echo ""
 fi
@@ -94,7 +94,7 @@ echo ""
 cd "$PROJ_ROOT/phylodb"
 
 # Change group ID to docker.
-newgrp docker
+# newgrp docker
 docker build -t phylodb .
 
 # Change back to original group ID.

@@ -3,7 +3,7 @@ version: "3.7"
 services:
     db:
         user: ${USER}
-        image: neo4j:latest
+        image: neo4j:4.4
         ports:
           - 7474:7474
           - 7687:7687
@@ -21,6 +21,6 @@ services:
     app:
         image: phylodb:latest
         ports:
-            - 8080:8080
+            - 8081:8080
         volumes:
             - ${APP_PATH}/logs:/logs

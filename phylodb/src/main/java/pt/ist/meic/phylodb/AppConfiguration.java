@@ -4,6 +4,7 @@ import org.springframework.context.annotation.Configuration;
 import org.springframework.web.servlet.config.annotation.InterceptorRegistry;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 import pt.ist.meic.phylodb.security.authentication.AuthenticationInterceptor;
+import pt.ist.meic.phylodb.security.authentication.DummyAuthenticationInterceptor;
 import pt.ist.meic.phylodb.security.authorization.AuthorizationInterceptor;
 
 /**
@@ -12,18 +13,21 @@ import pt.ist.meic.phylodb.security.authorization.AuthorizationInterceptor;
 @Configuration
 public class AppConfiguration implements WebMvcConfigurer {
 
-	private final AuthenticationInterceptor authenticationInterceptor;
-	private final AuthorizationInterceptor authorizationInterceptor;
+    private final AuthenticationInterceptor authenticationInterceptor;
+    private final AuthorizationInterceptor authorizationInterceptor;
+    private final DummyAuthenticationInterceptor dummyAuthenticationInterceptor;
 
-	public AppConfiguration(AuthenticationInterceptor authenticationInterceptor, AuthorizationInterceptor authorizationInterceptor) {
-		this.authenticationInterceptor = authenticationInterceptor;
-		this.authorizationInterceptor = authorizationInterceptor;
-	}
+    public AppConfiguration(AuthenticationInterceptor authenticationInterceptor,
+                            AuthorizationInterceptor authorizationInterceptor,
+                            DummyAuthenticationInterceptor dummyAuthenticationInterceptor) {
+        this.authenticationInterceptor = authenticationInterceptor;
+        this.authorizationInterceptor = authorizationInterceptor;
+        this.dummyAuthenticationInterceptor = dummyAuthenticationInterceptor;
+    }
 
-	@Override
-	public void addInterceptors(InterceptorRegistry registry) {
-		registry.addInterceptor(authenticationInterceptor);
-		registry.addInterceptor(authorizationInterceptor);
-	}
+    @Override
+    public void addInterceptors(InterceptorRegistry registry) {
+        registry.addInterceptor(dummyAuthenticationInterceptor);
+    }
 
 }

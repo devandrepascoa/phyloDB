@@ -3,20 +3,25 @@
   <component name="AnalysisUIOptions">
     <option name="ANALYZE_TEST_SOURCES" value="false" />
   </component>
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="165b53e7-f478-4579-ae97-db99dea7449b" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/../algorithms/src/main/java/algorithm/inference/InferenceRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/../algorithms/src/main/java/algorithm/inference/InferenceRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../algorithms/src/test/java/algorithm/inference/InferenceRepositoryTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/../algorithms/src/test/java/algorithm/inference/InferenceRepositoryTests.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../algorithms/src/test/java/resources/inference/ctx-2p-1a.cypher" beforeDir="false" afterPath="$PROJECT_DIR$/../algorithms/src/test/java/resources/inference/ctx-2p-1a.cypher" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../algorithms/src/test/java/resources/inference/ctx-2p-na.cypher" beforeDir="false" afterPath="$PROJECT_DIR$/../algorithms/src/test/java/resources/inference/ctx-2p-na.cypher" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../algorithms/src/test/java/resources/inference/ctx-np-1a.cypher" beforeDir="false" afterPath="$PROJECT_DIR$/../algorithms/src/test/java/resources/inference/ctx-np-1a.cypher" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../algorithms/src/test/java/resources/inference/ctx-np-na-m.cypher" beforeDir="false" afterPath="$PROJECT_DIR$/../algorithms/src/test/java/resources/inference/ctx-np-na-m.cypher" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../algorithms/src/test/java/resources/inference/ctx-np-na.cypher" beforeDir="false" afterPath="$PROJECT_DIR$/../algorithms/src/test/java/resources/inference/ctx-np-na.cypher" afterDir="false" />
+    <list default="true" id="165b53e7-f478-4579-ae97-db99dea7449b" name="Default Changelist" comment="Changed newick formatting to accept doubles and removed authentication.">
+      <change afterPath="$PROJECT_DIR$/src/main/java/pt/ist/meic/phylodb/security/authentication/DummyAuthenticationInterceptor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../build-docker.sh" beforeDir="false" afterPath="$PROJECT_DIR$/../build-docker.sh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/../docker-compose.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../launch-docker.sh" beforeDir="false" afterPath="$PROJECT_DIR$/../launch-docker.sh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/phylodb.iml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pt/ist/meic/phylodb/analysis/visualization/VisualizationRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pt/ist/meic/phylodb/analysis/visualization/VisualizationRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pt/ist/meic/phylodb/security/project/ProjectRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pt/ist/meic/phylodb/security/project/ProjectRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pt/ist/meic/phylodb/typing/profile/ProfileRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pt/ist/meic/phylodb/typing/profile/ProfileRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/pt/ist/meic/phylodb/unit/security/project/ProjectRepositoryTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pt/ist/meic/phylodb/unit/security/project/ProjectRepositoryTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pt/ist/meic/phylodb/AppConfiguration.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pt/ist/meic/phylodb/AppConfiguration.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pt/ist/meic/phylodb/analysis/inference/InferenceController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pt/ist/meic/phylodb/analysis/inference/InferenceController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pt/ist/meic/phylodb/io/formatters/analysis/NewickFormatter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pt/ist/meic/phylodb/io/formatters/analysis/NewickFormatter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pt/ist/meic/phylodb/typing/dataset/model/DatasetInputModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pt/ist/meic/phylodb/typing/dataset/model/DatasetInputModel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pt/ist/meic/phylodb/typing/profile/ProfileService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pt/ist/meic/phylodb/typing/profile/ProfileService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../scripts/init/init_data.cypher" beforeDir="false" afterPath="$PROJECT_DIR$/../scripts/init/init_data.cypher" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -44,17 +49,6 @@
                 <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
                 <item name="phylodb" type="f1a62948:ProjectNode" />
               </path>
-              <path>
-                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
-                <item name="phylodb" type="f1a62948:ProjectNode" />
-                <item name="Tasks" type="e4a08cd1:TasksNode" />
-              </path>
-              <path>
-                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
-                <item name="phylodb" type="f1a62948:ProjectNode" />
-                <item name="Tasks" type="e4a08cd1:TasksNode" />
-                <item name="build" type="c8890929:TasksNode$1" />
-              </path>
             </expand>
             <select />
           </tree_state>
@@ -67,8 +61,8 @@
       <list>
         <option value="AnnotationType" />
         <option value="Enum" />
-        <option value="Class" />
         <option value="Interface" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -83,14 +77,25 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">
-    <property name="extract.method.default.visibility" value="private" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="project.structure.last.edited" value="Project" />
-    <property name="project.structure.proportion" value="0.15" />
-    <property name="project.structure.side.proportion" value="0.0" />
-    <property name="settings.editor.selected.configurable" value="reference.projectsettings.compiler.annotationProcessors" />
-  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RequestMappingsPanelOrder0": "0",
+    "RequestMappingsPanelOrder1": "1",
+    "RequestMappingsPanelWidth0": "75",
+    "RequestMappingsPanelWidth1": "75",
+    "SONARLINT_PRECOMMIT_ANALYSIS": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "git-widget-placeholder": "master",
+    "last_opened_file_path": "C:/ISEL/6th semester/PFC/phyloDB",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "preferences.pluginManager",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\Bruno\Desktop\Projeto\Project\PhyloDB\phylodb\src\main\resources" />
@@ -118,7 +123,7 @@
       <recent name="pt.ist.meic.phylodb.phylogeny.locus.model" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.PhylodbApplication">
+  <component name="RunManager" selected="Spring Boot.PhylodbApplication">
     <configuration name="PhylodbApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="pt.ist.meic.phylodb.PhylodbApplication" />
       <module name="phylodb.main" />
@@ -193,12 +198,20 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="PhylodbApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="phylodb.main" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="pt.ist.meic.phylodb.PhylodbApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <list>
       <item itemvalue="Application.PhylodbApplication" />
       <item itemvalue="JUnit.pt.ist.meic.phylodb.unit in phylodb.test" />
       <item itemvalue="JUnit.VisualizationRepositoryTests" />
       <item itemvalue="JUnit.ProjectRepositoryTests.find" />
       <item itemvalue="JUnit.ProjectRepositoryTests.findAll" />
+      <item itemvalue="Spring Boot.PhylodbApplication" />
     </list>
     <recent_temporary>
       <list>
@@ -210,6 +223,7 @@
       </list>
     </recent_temporary>
   </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -220,70 +234,35 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1572190930259</updated>
+      <workItem from="1680973207205" duration="22651000" />
     </task>
     <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="origin/master" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
           </value>
         </entry>
       </map>
     </option>
-    <option name="oldMeFiltersMigrated" value="true" />
-  </component>
-  <component name="WindowStateProjectService">
-    <state x="574" y="67" width="388" height="437" key="#com.intellij.ide.util.MemberChooser" timestamp="1603562827186">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state x="574" y="67" width="388" height="437" key="#com.intellij.ide.util.MemberChooser/0.0.1536.824@0.0.1536.824" timestamp="1603562827186" />
-    <state x="590" y="339" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog" timestamp="1603562179128">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state x="590" y="339" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog/0.0.1536.824@0.0.1536.824" timestamp="1603562179128" />
-    <state x="0" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1603550378392">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state x="0" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1536.824@0.0.1536.824" timestamp="1603550378392" />
-    <state x="549" y="167" key="FileChooserDialogImpl" timestamp="1609877186783">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state x="549" y="167" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1609877186783" />
-    <state width="1493" height="238" key="GridCell.Tab.0.bottom" timestamp="1610643967370">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state width="1493" height="238" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1610643967370" />
-    <state width="1493" height="238" key="GridCell.Tab.0.center" timestamp="1610643967370">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state width="1493" height="238" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1610643967370" />
-    <state width="1493" height="238" key="GridCell.Tab.0.left" timestamp="1610643967370">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state width="1493" height="238" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1610643967370" />
-    <state width="1493" height="238" key="GridCell.Tab.0.right" timestamp="1610643967370">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state width="1493" height="238" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1610643967370" />
-    <state width="1493" height="246" key="GridCell.Tab.1.bottom" timestamp="1610641688920">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state width="1493" height="246" key="GridCell.Tab.1.bottom/0.0.1536.824@0.0.1536.824" timestamp="1610641688920" />
-    <state width="1493" height="246" key="GridCell.Tab.1.center" timestamp="1610641688919">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state width="1493" height="246" key="GridCell.Tab.1.center/0.0.1536.824@0.0.1536.824" timestamp="1610641688919" />
-    <state width="1493" height="246" key="GridCell.Tab.1.left" timestamp="1610641688919">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state width="1493" height="246" key="GridCell.Tab.1.left/0.0.1536.824@0.0.1536.824" timestamp="1610641688919" />
-    <state width="1493" height="246" key="GridCell.Tab.1.right" timestamp="1610641688920">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state width="1493" height="246" key="GridCell.Tab.1.right/0.0.1536.824@0.0.1536.824" timestamp="1610641688920" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -313,12 +292,32 @@
           <line>91</line>
           <option name="timeStamp" value="9" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/pt/ist/meic/phylodb/analysis/inference/InferenceController.java</url>
+          <line>58</line>
+          <properties>
+            <option name="lambda-ordinal" value="-1" />
+          </properties>
+          <option name="timeStamp" value="37" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/pt/ist/meic/phylodb/analysis/inference/InferenceController.java</url>
+          <line>81</line>
+          <option name="timeStamp" value="38" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/pt/ist/meic/phylodb/analysis/inference/InferenceController.java</url>
+          <line>134</line>
+          <properties>
+            <option name="lambda-ordinal" value="-1" />
+          </properties>
+          <option name="timeStamp" value="39" />
+        </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
     <pin-to-top-manager>
       <pinned-members>
-        <PinnedItemInfo typeName="pt.ist.meic.phylodb.security.authorization.project.model.ProjectOutputModel" fieldName="description" />
-        <PinnedItemInfo typeName="pt.ist.meic.phylodb.utils.service.Entity" fieldName="id" />
+        <PinnedItemInfo />
       </pinned-members>
     </pin-to-top-manager>
     <watches-manager>
@@ -342,10 +341,10 @@
     <SUITE FILE_PATH="coverage/phylodb$PhylodbApplication.ic" NAME="PhylodbApplication Coverage Results" MODIFIED="1601907437073" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>pt.ist.meic.phylodb.*</FILTER>
     </SUITE>
-    <SUITE FILE_PATH="coverage/phylodb$pt_ist_meic_phylodb_in_phylodb_test.ic" NAME="pt.ist.meic.phylodb in phylodb.test Coverage Results" MODIFIED="1588779690994" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+    <SUITE FILE_PATH="coverage/phylodb$pt_ist_meic_phylodb_unit_in_phylodb_test.ic" NAME="pt.ist.meic.phylodb.unit in phylodb.test Coverage Results" MODIFIED="1601908047890" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>pt.ist.meic.phylodb.*</FILTER>
     </SUITE>
-    <SUITE FILE_PATH="coverage/phylodb$pt_ist_meic_phylodb_unit_in_phylodb_test.ic" NAME="pt.ist.meic.phylodb.unit in phylodb.test Coverage Results" MODIFIED="1601908047890" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+    <SUITE FILE_PATH="coverage/phylodb$pt_ist_meic_phylodb_in_phylodb_test.ic" NAME="pt.ist.meic.phylodb in phylodb.test Coverage Results" MODIFIED="1588779690994" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>pt.ist.meic.phylodb.*</FILTER>
     </SUITE>
   </component>

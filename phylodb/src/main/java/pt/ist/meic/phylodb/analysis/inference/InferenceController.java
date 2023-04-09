@@ -105,9 +105,9 @@ public class InferenceController extends Controller {
 	public ResponseEntity<?> postInference(
 			@PathVariable("project") String projectId,
 			@PathVariable("dataset") String datasetId,
-			@RequestParam("algorithm") String algorithm,
-			@RequestParam("format") String format,
-			@RequestParam("file") MultipartFile file
+			@RequestPart("file") MultipartFile file,
+			@RequestPart("algorithm") String algorithm,
+			@RequestPart("format") String format
 	) throws IOException {
 		Optional<String> optional = service.saveInference(projectId, datasetId, algorithm, format, file);
 		return optional.isPresent() ?

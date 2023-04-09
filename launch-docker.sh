@@ -4,7 +4,7 @@
 PROJ_ROOT="$(dirname "$(readlink -f "${BASH_SOURCE[0]}")")"
 pushd "$PROJ_ROOT"  # cd current directory
 
-newgrp docker
+# newgrp docker
 
 cd "instance1"
 #USER=$(id -u):$(id -g) DB_PATH=$HOME/instance1/db APP_PATH=$HOME/instance1/app docker-compose up -d
