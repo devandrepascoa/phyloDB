@@ -4,7 +4,7 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.Arguments;
 import org.junit.jupiter.params.provider.MethodSource;
-import org.neo4j.ogm.model.Result;
+import org.neo4j.driver.Result;
 import pt.ist.meic.phylodb.unit.RepositoryTestsContext;
 import pt.ist.meic.phylodb.typing.isolate.model.Ancillary;
 import pt.ist.meic.phylodb.typing.isolate.model.Isolate;
@@ -260,7 +260,7 @@ public class IsolateRepositoryTests extends RepositoryTestsContext {
 		VersionedEntity<Profile.PrimaryKey> profile = null;
 		if (row.get("profileId") != null)
 			profile = new VersionedEntity<>(new Profile.PrimaryKey(projectId, datasetId, (String) row.get("profileId")), (long) row.get("profileVersion"), (boolean) row.get("profileDeprecated"));
-		Ancillary[] ancillaries = Arrays.stream((Map<String, Object>[]) row.get("ancillaries"))
+		Ancillary[] ancillaries = Arrays.stream((List<Map<String, Object>>) row.get("ancillaries"))
 				.filter(a -> a.get("key") != null)
 				.map(a -> new Ancillary((String) a.get("key"), (String) a.get("value")))
 				.toArray(Ancillary[]::new);
@@ -286,7 +286,7 @@ public class IsolateRepositoryTests extends RepositoryTestsContext {
 				"id.description as description, ancillary as ancillaries";
 		Result result = query(new Query(statement, PROJECT1.getPrimaryKey(), DATASET1.getPrimaryKey().getId()));
 		if (result == null) return new Isolate[0];
-		return StreamSupport.stream(result.spliterator(), false)
+		return StreamSupport.stream(result.stream().map(MapAccessor::asMap).spliterator(), false)
 				.map(this::parse)
 				.toArray(Isolate[]::new);
 	}

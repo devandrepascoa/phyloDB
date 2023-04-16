@@ -4,7 +4,8 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.Arguments;
 import org.junit.jupiter.params.provider.MethodSource;
-import org.neo4j.ogm.model.Result;
+import org.neo4j.driver.Result;
+import org.neo4j.driver.types.MapAccessor;
 import pt.ist.meic.phylodb.unit.RepositoryTestsContext;
 import pt.ist.meic.phylodb.analysis.visualization.model.Coordinate;
 import pt.ist.meic.phylodb.analysis.visualization.model.Visualization;
@@ -106,7 +107,7 @@ public class VisualizationRepositoryTests extends RepositoryTestsContext {
 		List<Coordinate> list = new ArrayList<>();
 		String projectId = row.get("projectId").toString();
 		String datasetId = row.get("datasetId").toString();
-		for (Map<String, Object> coordinates: (Map<String, Object>[]) row.get("coordinates")) {
+		for (Map<String, Object> coordinates: (List<Map<String, Object>>) row.get("coordinates")) {
 			Profile.PrimaryKey profile = new Profile.PrimaryKey(projectId, datasetId, (String) coordinates.get("profileId"));
 			list.add(new Coordinate(profile, (long) coordinates.get("component"), (double) coordinates.get("x"), (double) coordinates.get("y")));
 		}
@@ -130,7 +131,7 @@ public class VisualizationRepositoryTests extends RepositoryTestsContext {
 				"ORDER BY pj.id, ds.id, inferenceId, size(h.id), h.id";
 		Result result = query(new Query(statement, PROJECT1.getPrimaryKey(), DATASET1.getPrimaryKey().getId(), INFERENCE1.getPrimaryKey().getId()));
 		if (result == null) return new Visualization[0];
-		return StreamSupport.stream(result.spliterator(), false)
+		return StreamSupport.stream(result.stream().map(MapAccessor::asMap).spliterator(), false)
 				.map(this::parse)
 				.toArray(Visualization[]::new);
 	}

@@ -1,240 +1,169 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="AnalysisUIOptions">
-    <option name="ANALYZE_TEST_SOURCES" value="false" />
-  </component>
   <component name="AutoImportSettings">
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="165b53e7-f478-4579-ae97-db99dea7449b" name="Default Changelist" comment="Changed newick formatting to accept doubles and removed authentication.">
-      <change afterPath="$PROJECT_DIR$/src/main/java/pt/ist/meic/phylodb/security/authentication/DummyAuthenticationInterceptor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../build-docker.sh" beforeDir="false" afterPath="$PROJECT_DIR$/../build-docker.sh" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/../docker-compose.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../launch-docker.sh" beforeDir="false" afterPath="$PROJECT_DIR$/../launch-docker.sh" afterDir="false" />
+    <list default="true" id="2c4f01b8-40cc-4d41-b93f-f74c1afe058b" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/discord.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/jpa-buddy.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/index.pb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/codeStyles/Project.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dbnavigator.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/phylodb.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/uiDesigner.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pt/ist/meic/phylodb/AppConfiguration.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pt/ist/meic/phylodb/AppConfiguration.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pt/ist/meic/phylodb/analysis/inference/InferenceController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pt/ist/meic/phylodb/analysis/inference/InferenceController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pt/ist/meic/phylodb/io/formatters/analysis/NewickFormatter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pt/ist/meic/phylodb/io/formatters/analysis/NewickFormatter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pt/ist/meic/phylodb/typing/dataset/model/DatasetInputModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pt/ist/meic/phylodb/typing/dataset/model/DatasetInputModel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pt/ist/meic/phylodb/typing/profile/ProfileService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pt/ist/meic/phylodb/typing/profile/ProfileService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.jar" beforeDir="false" afterPath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties" beforeDir="false" afterPath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pt/ist/meic/phylodb/AppConfiguration.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pt/ist/meic/phylodb/PhylodbApplication.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pt/ist/meic/phylodb/analysis/inference/InferenceController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pt/ist/meic/phylodb/analysis/inference/InferenceRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pt/ist/meic/phylodb/analysis/inference/InferenceRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pt/ist/meic/phylodb/analysis/inference/model/GetInferenceOutputModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pt/ist/meic/phylodb/analysis/inference/model/GetInferenceOutputModel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pt/ist/meic/phylodb/analysis/inference/model/GetInferencesOutputModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pt/ist/meic/phylodb/analysis/inference/model/GetInferencesOutputModel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pt/ist/meic/phylodb/analysis/inference/model/InferenceOutputModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pt/ist/meic/phylodb/analysis/inference/model/InferenceOutputModel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pt/ist/meic/phylodb/analysis/visualization/VisualizationController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pt/ist/meic/phylodb/analysis/visualization/VisualizationRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pt/ist/meic/phylodb/analysis/visualization/VisualizationRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pt/ist/meic/phylodb/analysis/visualization/model/GetVisualizationOutputModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pt/ist/meic/phylodb/analysis/visualization/model/GetVisualizationOutputModel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pt/ist/meic/phylodb/analysis/visualization/model/GetVisualizationsOutputModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pt/ist/meic/phylodb/analysis/visualization/model/GetVisualizationsOutputModel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pt/ist/meic/phylodb/analysis/visualization/model/VisualizationOutputModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pt/ist/meic/phylodb/analysis/visualization/model/VisualizationOutputModel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pt/ist/meic/phylodb/error/ErrorOutputModel.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pt/ist/meic/phylodb/error/ExceptionHandlerAdvice.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pt/ist/meic/phylodb/error/Problem.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pt/ist/meic/phylodb/io/formatters/dataset/profile/ProfilesFormatter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pt/ist/meic/phylodb/io/formatters/dataset/profile/ProfilesFormatter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pt/ist/meic/phylodb/job/JobController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pt/ist/meic/phylodb/job/JobRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pt/ist/meic/phylodb/job/JobRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pt/ist/meic/phylodb/job/model/GetJobsOutputModel.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pt/ist/meic/phylodb/job/model/JobAcceptedOutputModel.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pt/ist/meic/phylodb/job/model/JobInputModel.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pt/ist/meic/phylodb/job/model/JobOutputModel.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pt/ist/meic/phylodb/phylogeny/allele/AlleleController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pt/ist/meic/phylodb/phylogeny/allele/AlleleRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pt/ist/meic/phylodb/phylogeny/allele/AlleleRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pt/ist/meic/phylodb/phylogeny/locus/LocusController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pt/ist/meic/phylodb/phylogeny/locus/LocusRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pt/ist/meic/phylodb/phylogeny/locus/LocusRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pt/ist/meic/phylodb/phylogeny/locus/model/GetLociOutputModel.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pt/ist/meic/phylodb/phylogeny/locus/model/GetLocusOutputModel.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pt/ist/meic/phylodb/phylogeny/locus/model/LocusInputModel.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pt/ist/meic/phylodb/phylogeny/locus/model/LocusOutputModel.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pt/ist/meic/phylodb/phylogeny/taxon/TaxonController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pt/ist/meic/phylodb/phylogeny/taxon/TaxonRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pt/ist/meic/phylodb/phylogeny/taxon/TaxonRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pt/ist/meic/phylodb/phylogeny/taxon/model/GetTaxaOutputModel.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pt/ist/meic/phylodb/phylogeny/taxon/model/GetTaxonOutputModel.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pt/ist/meic/phylodb/phylogeny/taxon/model/TaxonInputModel.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pt/ist/meic/phylodb/phylogeny/taxon/model/TaxonOutputModel.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pt/ist/meic/phylodb/security/SecurityInterceptor.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pt/ist/meic/phylodb/security/authentication/AuthenticationInterceptor.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pt/ist/meic/phylodb/security/authentication/DummyAuthenticationInterceptor.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pt/ist/meic/phylodb/security/authentication/TokenInfo.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pt/ist/meic/phylodb/security/authentication/google/GoogleInterceptor.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pt/ist/meic/phylodb/security/authentication/google/GoogleToken.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pt/ist/meic/phylodb/security/authorization/AuthorizationInterceptor.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pt/ist/meic/phylodb/security/project/ProjectController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pt/ist/meic/phylodb/security/project/ProjectRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pt/ist/meic/phylodb/security/project/ProjectRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pt/ist/meic/phylodb/security/project/model/GetProjectOutputModel.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pt/ist/meic/phylodb/security/project/model/GetProjectsOutputModel.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pt/ist/meic/phylodb/security/project/model/ProjectInputModel.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pt/ist/meic/phylodb/security/project/model/ProjectOutputModel.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pt/ist/meic/phylodb/security/user/UserController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pt/ist/meic/phylodb/security/user/UserRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pt/ist/meic/phylodb/security/user/UserRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pt/ist/meic/phylodb/security/user/model/GetUserOutputModel.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pt/ist/meic/phylodb/security/user/model/GetUsersOutputModel.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pt/ist/meic/phylodb/security/user/model/UserInputModel.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pt/ist/meic/phylodb/security/user/model/UserOutputModel.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pt/ist/meic/phylodb/typing/dataset/DatasetController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pt/ist/meic/phylodb/typing/dataset/DatasetRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pt/ist/meic/phylodb/typing/dataset/DatasetRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pt/ist/meic/phylodb/typing/dataset/model/DatasetInputModel.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pt/ist/meic/phylodb/typing/dataset/model/DatasetOutputModel.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pt/ist/meic/phylodb/typing/dataset/model/GetDatasetOutputModel.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pt/ist/meic/phylodb/typing/dataset/model/GetDatasetsOutputModel.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pt/ist/meic/phylodb/typing/isolate/IsolateController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pt/ist/meic/phylodb/typing/isolate/IsolateRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pt/ist/meic/phylodb/typing/isolate/IsolateRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pt/ist/meic/phylodb/typing/isolate/model/GetIsolateOutputModel.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pt/ist/meic/phylodb/typing/isolate/model/GetIsolatesOutputModel.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pt/ist/meic/phylodb/typing/isolate/model/IsolateInputModel.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pt/ist/meic/phylodb/typing/isolate/model/IsolateOutputModel.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pt/ist/meic/phylodb/typing/profile/ProfileController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pt/ist/meic/phylodb/typing/profile/ProfileRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pt/ist/meic/phylodb/typing/profile/ProfileRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pt/ist/meic/phylodb/typing/profile/model/GetProfileOutputModel.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pt/ist/meic/phylodb/typing/profile/model/GetProfilesOutputModel.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pt/ist/meic/phylodb/typing/profile/model/ProfileInputModel.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pt/ist/meic/phylodb/typing/profile/model/ProfileOutputModel.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pt/ist/meic/phylodb/typing/schema/SchemaController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pt/ist/meic/phylodb/typing/schema/SchemaRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pt/ist/meic/phylodb/typing/schema/SchemaRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pt/ist/meic/phylodb/typing/schema/model/GetSchemaOutputModel.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pt/ist/meic/phylodb/typing/schema/model/GetSchemasOutputModel.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pt/ist/meic/phylodb/typing/schema/model/SchemaInputModel.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pt/ist/meic/phylodb/typing/schema/model/SchemaOutputModel.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pt/ist/meic/phylodb/utils/controller/Controller.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pt/ist/meic/phylodb/utils/db/BatchRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pt/ist/meic/phylodb/utils/db/BatchRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pt/ist/meic/phylodb/utils/db/EntityRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pt/ist/meic/phylodb/utils/db/EntityRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pt/ist/meic/phylodb/utils/db/Repository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pt/ist/meic/phylodb/utils/db/Repository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pt/ist/meic/phylodb/utils/db/UnversionedRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pt/ist/meic/phylodb/utils/db/UnversionedRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pt/ist/meic/phylodb/utils/db/VersionedRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pt/ist/meic/phylodb/utils/db/VersionedRepository.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../scripts/init/init_data.cypher" beforeDir="false" afterPath="$PROJECT_DIR$/../scripts/init/init_data.cypher" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/pt/ist/meic/phylodb/performance/Benchmarks.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pt/ist/meic/phylodb/performance/Benchmarks.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/pt/ist/meic/phylodb/stress/Context.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pt/ist/meic/phylodb/stress/Context.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/pt/ist/meic/phylodb/unit/RepositoryTestsContext.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pt/ist/meic/phylodb/unit/RepositoryTestsContext.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/pt/ist/meic/phylodb/unit/analysis/inference/InferenceRepositoryTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pt/ist/meic/phylodb/unit/analysis/inference/InferenceRepositoryTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/pt/ist/meic/phylodb/unit/analysis/visualization/VisualizationRepositoryTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pt/ist/meic/phylodb/unit/analysis/visualization/VisualizationRepositoryTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/pt/ist/meic/phylodb/unit/job/JobRepositoryTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pt/ist/meic/phylodb/unit/job/JobRepositoryTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/pt/ist/meic/phylodb/unit/phylogeny/allele/AlleleRepositoryTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pt/ist/meic/phylodb/unit/phylogeny/allele/AlleleRepositoryTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/pt/ist/meic/phylodb/unit/phylogeny/locus/LocusRepositoryTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pt/ist/meic/phylodb/unit/phylogeny/locus/LocusRepositoryTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/pt/ist/meic/phylodb/unit/phylogeny/taxon/TaxonRepositoryTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pt/ist/meic/phylodb/unit/phylogeny/taxon/TaxonRepositoryTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/pt/ist/meic/phylodb/unit/security/AuthorizationInterceptorTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pt/ist/meic/phylodb/unit/security/AuthorizationInterceptorTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/pt/ist/meic/phylodb/unit/security/project/ProjectRepositoryTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pt/ist/meic/phylodb/unit/security/project/ProjectRepositoryTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/pt/ist/meic/phylodb/unit/security/user/UserRepositoryTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pt/ist/meic/phylodb/unit/security/user/UserRepositoryTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/pt/ist/meic/phylodb/unit/typing/dataset/DatasetRepositoryTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pt/ist/meic/phylodb/unit/typing/dataset/DatasetRepositoryTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/pt/ist/meic/phylodb/unit/typing/isolate/IsolateRepositoryTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pt/ist/meic/phylodb/unit/typing/isolate/IsolateRepositoryTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/pt/ist/meic/phylodb/unit/typing/profile/ProfileRepositoryTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pt/ist/meic/phylodb/unit/typing/profile/ProfileRepositoryTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/pt/ist/meic/phylodb/unit/typing/schema/SchemaRepositoryTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pt/ist/meic/phylodb/unit/typing/schema/SchemaRepositoryTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/pt/ist/meic/phylodb/utils/DbUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pt/ist/meic/phylodb/utils/DbUtils.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="CodeInsightWorkspaceSettings">
-    <option name="optimizeImportsOnTheFly" value="true" />
-  </component>
   <component name="ExternalProjectsData">
     <projectState path="$PROJECT_DIR$">
       <ProjectState />
     </projectState>
   </component>
-  <component name="ExternalProjectsManager">
-    <system id="GRADLE">
-      <state>
-        <task path="$PROJECT_DIR$">
-          <activation />
-        </task>
-        <projects_view>
-          <tree_state>
-            <expand>
-              <path>
-                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
-                <item name="phylodb" type="f1a62948:ProjectNode" />
-              </path>
-            </expand>
-            <select />
-          </tree_state>
-        </projects_view>
-      </state>
-    </system>
-  </component>
-  <component name="FileTemplateManagerImpl">
-    <option name="RECENT_TEMPLATES">
-      <list>
-        <option value="AnnotationType" />
-        <option value="Enum" />
-        <option value="Interface" />
-        <option value="Class" />
-      </list>
-    </option>
-  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
-  <component name="ProjectId" id="1Tepve2Bbp47ORO1qsEPPRHplkA" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
-    <ConfirmationsSetting value="1" id="Add" />
-  </component>
+  <component name="ProjectId" id="2OVsOjStLRjeHYPJpbHkbTIvrpL" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
-    "RequestMappingsPanelOrder0": "0",
-    "RequestMappingsPanelOrder1": "1",
-    "RequestMappingsPanelWidth0": "75",
-    "RequestMappingsPanelWidth1": "75",
-    "SONARLINT_PRECOMMIT_ANALYSIS": "true",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
-    "git-widget-placeholder": "master",
-    "last_opened_file_path": "C:/ISEL/6th semester/PFC/phyloDB",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "preferences.pluginManager",
+    "git-widget-placeholder": "phylolib-library",
+    "ignore.virus.scanning.warn.message": "true",
+    "last_opened_file_path": "C:/ISEL/6th semester/PFC",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
-  <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\Bruno\Desktop\Projeto\Project\PhyloDB\phylodb\src\main\resources" />
-      <recent name="C:\Users\Bruno\Desktop\Projeto\PhyloDB\phylodb\src\test\java\resources\formatters\ml" />
-    </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\Bruno\Desktop\Projeto\Project\PhyloDB\phylodb\src\test\java\resources\performance" />
-      <recent name="C:\Users\Bruno\Desktop\Projeto\Project\PhyloDB\phylodb\src\test\java\resources\formatters" />
-      <recent name="C:\Users\Bruno\Desktop\Projeto\Project\PhyloDB\phylodb\src\test\java\resources\formatters\newick" />
-      <recent name="C:\Users\Bruno\Desktop\Projeto\Project\PhyloDB\phylodb\src\test\java\pt\ist\meic\phylodb\job" />
-      <recent name="C:\Users\Bruno\Desktop\Projeto\Project\PhyloDB\phylodb\src\main\java\pt\ist\meic\phylodb\analysis\visualization\model" />
-    </key>
-    <key name="CopyClassDialog.RECENTS_KEY">
-      <recent name="pt.ist.meic.phylodb.performance" />
-      <recent name="pt.ist.meic.phylodb.formatters" />
-      <recent name="pt.ist.meic.phylodb.utils.service" />
-      <recent name="pt.ist.meic.phylodb.utils.db" />
-      <recent name="pt.ist.meic.phylodb.analysis" />
-    </key>
-    <key name="CreateClassDialog.RecentsKey">
-      <recent name="pt.ist.meic.phylodb.job.model" />
-      <recent name="pt.ist.meic.phylodb.typing.profile.model" />
-      <recent name="pt.ist.meic.phylodb.typing.dataset.model" />
-      <recent name="pt.ist.meic.phylodb.typing.schema.model" />
-      <recent name="pt.ist.meic.phylodb.phylogeny.locus.model" />
-    </key>
-  </component>
-  <component name="RunManager" selected="Spring Boot.PhylodbApplication">
-    <configuration name="PhylodbApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="pt.ist.meic.phylodb.PhylodbApplication" />
-      <module name="phylodb.main" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="pt.ist.meic.phylodb.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="ProjectRepositoryTests.find" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="phylodb.test" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="pt.ist.meic.phylodb.unit.security.project.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="pt.ist.meic.phylodb.unit.security.project" />
-      <option name="MAIN_CLASS_NAME" value="pt.ist.meic.phylodb.unit.security.project.ProjectRepositoryTests" />
-      <option name="METHOD_NAME" value="find(java.lang.String,long,[Lpt.ist.meic.phylodb.security.project.model.Project;,pt.ist.meic.phylodb.security.project.model.Project)" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="ProjectRepositoryTests.findAll" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="phylodb.test" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="pt.ist.meic.phylodb.unit.security.project.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="pt.ist.meic.phylodb.unit.security.project" />
-      <option name="MAIN_CLASS_NAME" value="pt.ist.meic.phylodb.unit.security.project.ProjectRepositoryTests" />
-      <option name="METHOD_NAME" value="findAll(int,[Lpt.ist.meic.phylodb.security.project.model.Project;,java.util.List)" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="VisualizationRepositoryTests" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="phylodb.test" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="pt.ist.meic.phylodb.unit.analysis.visualization.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="pt.ist.meic.phylodb.unit.analysis.visualization" />
-      <option name="MAIN_CLASS_NAME" value="pt.ist.meic.phylodb.unit.analysis.visualization.VisualizationRepositoryTests" />
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="pt.ist.meic.phylodb.unit in phylodb.test" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="phylodb.test" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="pt.ist.meic.phylodb.unit.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="pt.ist.meic.phylodb.unit" />
-      <option name="TEST_OBJECT" value="package" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="PhylodbApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
-      <module name="phylodb.main" />
-      <option name="SPRING_BOOT_MAIN_CLASS" value="pt.ist.meic.phylodb.PhylodbApplication" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <list>
-      <item itemvalue="Application.PhylodbApplication" />
-      <item itemvalue="JUnit.pt.ist.meic.phylodb.unit in phylodb.test" />
-      <item itemvalue="JUnit.VisualizationRepositoryTests" />
-      <item itemvalue="JUnit.ProjectRepositoryTests.find" />
-      <item itemvalue="JUnit.ProjectRepositoryTests.findAll" />
-      <item itemvalue="Spring Boot.PhylodbApplication" />
-    </list>
-    <recent_temporary>
-      <list>
-        <item itemvalue="Application.PhylodbApplication" />
-        <item itemvalue="JUnit.pt.ist.meic.phylodb.unit in phylodb.test" />
-        <item itemvalue="JUnit.ProjectRepositoryTests.findAll" />
-        <item itemvalue="JUnit.ProjectRepositoryTests.find" />
-        <item itemvalue="JUnit.VisualizationRepositoryTests" />
-      </list>
-    </recent_temporary>
-  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
-  <component name="SvnConfiguration">
-    <configuration />
-  </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="165b53e7-f478-4579-ae97-db99dea7449b" name="Default Changelist" comment="" />
-      <created>1572190930259</created>
+      <changelist id="2c4f01b8-40cc-4d41-b93f-f74c1afe058b" name="Changes" comment="" />
+      <created>1681657053360</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1572190930259</updated>
-      <workItem from="1680973207205" duration="22651000" />
+      <updated>1681657053360</updated>
+      <workItem from="1681657054618" duration="230000" />
     </task>
     <servers />
   </component>
@@ -246,106 +175,10 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State>
-              <option name="FILTERS">
-                <map>
-                  <entry key="branch">
-                    <value>
-                      <list>
-                        <option value="origin/master" />
-                      </list>
-                    </value>
-                  </entry>
-                </map>
-              </option>
-            </State>
+            <State />
           </value>
         </entry>
       </map>
     </option>
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/pt/ist/meic/phylodb/test/TestRepositoryImpl.java</url>
-          <line>20</line>
-          <option name="timeStamp" value="2" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/pt/ist/meic/phylodb/test/TestController.java</url>
-          <line>37</line>
-          <option name="timeStamp" value="4" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/pt/ist/meic/phylodb/analysis/inference/InferenceRepository.java</url>
-          <line>69</line>
-          <option name="timeStamp" value="5" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/pt/ist/meic/phylodb/typing/profile/ProfileRepository.java</url>
-          <line>71</line>
-          <option name="timeStamp" value="8" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/pt/ist/meic/phylodb/typing/profile/ProfileService.java</url>
-          <line>91</line>
-          <option name="timeStamp" value="9" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/pt/ist/meic/phylodb/analysis/inference/InferenceController.java</url>
-          <line>58</line>
-          <properties>
-            <option name="lambda-ordinal" value="-1" />
-          </properties>
-          <option name="timeStamp" value="37" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/pt/ist/meic/phylodb/analysis/inference/InferenceController.java</url>
-          <line>81</line>
-          <option name="timeStamp" value="38" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/pt/ist/meic/phylodb/analysis/inference/InferenceController.java</url>
-          <line>134</line>
-          <properties>
-            <option name="lambda-ordinal" value="-1" />
-          </properties>
-          <option name="timeStamp" value="39" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
-    <pin-to-top-manager>
-      <pinned-members>
-        <PinnedItemInfo />
-      </pinned-members>
-    </pin-to-top-manager>
-    <watches-manager>
-      <configuration name="JUnit">
-        <watch expression="x[1]" />
-        <watch expression="((java.util.ArrayList)((QueryResultModel)r).result).get(8)" custom="java.util.ArrayList,org.neo4j.ogm.response.model.QueryResultModel" />
-        <watch expression="stateResult[1].allelesIds" />
-        <watch expression="expectedState[2].edges" />
-        <watch expression="expected.key[1].to.id" />
-        <watch expression="expected.key[1].to.id" language="JAVA" />
-        <watch expression="expected.key[1].to.id" language="JAVA" />
-        <watch expression="expected.key[1].to.id" language="JAVA" />
-        <watch expression="edges.get(1).from" />
-      </configuration>
-      <configuration name="Application">
-        <watch expression="isolates.get(1)" />
-      </configuration>
-    </watches-manager>
-  </component>
-  <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/phylodb$PhylodbApplication.ic" NAME="PhylodbApplication Coverage Results" MODIFIED="1601907437073" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
-      <FILTER>pt.ist.meic.phylodb.*</FILTER>
-    </SUITE>
-    <SUITE FILE_PATH="coverage/phylodb$pt_ist_meic_phylodb_unit_in_phylodb_test.ic" NAME="pt.ist.meic.phylodb.unit in phylodb.test Coverage Results" MODIFIED="1601908047890" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
-      <FILTER>pt.ist.meic.phylodb.*</FILTER>
-    </SUITE>
-    <SUITE FILE_PATH="coverage/phylodb$pt_ist_meic_phylodb_in_phylodb_test.ic" NAME="pt.ist.meic.phylodb in phylodb.test Coverage Results" MODIFIED="1588779690994" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
-      <FILTER>pt.ist.meic.phylodb.*</FILTER>
-    </SUITE>
   </component>
 </project>

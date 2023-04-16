@@ -1,6 +1,6 @@
 package pt.ist.meic.phylodb.utils;
 
-import org.neo4j.ogm.session.Session;
+import org.neo4j.driver.Session;
 
 import java.util.Collections;
 

@@ -3,7 +3,7 @@ package pt.ist.meic.phylodb.unit.security.user;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.Arguments;
 import org.junit.jupiter.params.provider.MethodSource;
-import org.neo4j.ogm.model.Result;
+import org.neo4j.driver.Result;
 import pt.ist.meic.phylodb.unit.RepositoryTestsContext;
 import pt.ist.meic.phylodb.security.user.model.User;
 import pt.ist.meic.phylodb.security.authorization.Role;
@@ -134,7 +134,7 @@ public class UserRepositoryTests extends RepositoryTestsContext {
 				"ORDER BY id, version";
 		Result result = query(new Query(statement));
 		if (result == null) return new User[0];
-		return StreamSupport.stream(result.spliterator(), false)
+		return StreamSupport.stream(result.stream().map(MapAccessor::asMap).spliterator(), false)
 				.map(this::parse)
 				.toArray(User[]::new);
 	}

@@ -1,7 +1,9 @@
 package pt.ist.meic.phylodb.job;
 
-import org.neo4j.ogm.model.Result;
-import org.neo4j.ogm.session.Session;
+import org.neo4j.driver.Driver;
+import org.neo4j.driver.Result;
+import org.neo4j.driver.types.MapAccessor;
+import org.springframework.data.neo4j.core.Neo4jTemplate;
 import org.springframework.stereotype.Repository;
 import pt.ist.meic.phylodb.job.model.Job;
 import pt.ist.meic.phylodb.utils.db.Query;
@@ -19,8 +21,8 @@ public class JobRepository extends pt.ist.meic.phylodb.utils.db.Repository {
 	public static final String FULLY_QUALIFIED = "algorithms.%s";
 	public static final int UUID_LENGTH = UUID.randomUUID().toString().length();
 
-	protected JobRepository(Session session) {
-		super(session);
+	protected JobRepository(Driver driver, Neo4jTemplate template) {
+		super(driver.session(), template);
 	}
 
 	/**
@@ -35,7 +37,7 @@ public class JobRepository extends pt.ist.meic.phylodb.utils.db.Repository {
 		if (page < 0 || limit < 0) return Optional.empty();
 		Result result = getAll(page * limit, limit, filters);
 		if (result == null) return Optional.empty();
-		return Optional.of(StreamSupport.stream(result.spliterator(), false)
+		return Optional.of(StreamSupport.stream(result.stream().map(MapAccessor::asMap).spliterator(), false)
 				.map(this::parse)
 				.collect(Collectors.toList()));
 	}

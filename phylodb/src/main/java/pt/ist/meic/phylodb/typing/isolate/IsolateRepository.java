@@ -1,7 +1,8 @@
 package pt.ist.meic.phylodb.typing.isolate;
 
-import org.neo4j.ogm.model.Result;
-import org.neo4j.ogm.session.Session;
+import org.neo4j.driver.Driver;
+import org.neo4j.driver.Result;
+import org.springframework.data.neo4j.core.Neo4jTemplate;
 import org.springframework.stereotype.Repository;
 import pt.ist.meic.phylodb.typing.isolate.model.Ancillary;
 import pt.ist.meic.phylodb.typing.isolate.model.Isolate;
@@ -10,7 +11,6 @@ import pt.ist.meic.phylodb.utils.db.BatchRepository;
 import pt.ist.meic.phylodb.utils.db.Query;
 import pt.ist.meic.phylodb.utils.service.VersionedEntity;
 
-import java.util.Arrays;
 import java.util.List;
 import java.util.Map;
 
@@ -20,8 +20,8 @@ import java.util.Map;
 @Repository
 public class IsolateRepository extends BatchRepository<Isolate, Isolate.PrimaryKey> {
 
-	public IsolateRepository(Session session) {
-		super(session);
+	public IsolateRepository(Driver driver, Neo4jTemplate template) {
+		super(driver, template);
 	}
 
 	@Override
@@ -82,7 +82,8 @@ public class IsolateRepository extends BatchRepository<Isolate, Isolate.PrimaryK
 		VersionedEntity<Profile.PrimaryKey> profile = null;
 		if (row.get("profileId") != null)
 			profile = new VersionedEntity<>(new Profile.PrimaryKey(projectId, datasetId, (String) row.get("profileId")), (long) row.get("profileVersion"), (boolean) row.get("profileDeprecated"));
-		Ancillary[] ancillaries = Arrays.stream((Map<String, Object>[]) row.get("ancillaries"))
+		Ancillary[] ancillaries = ((List<Map<String, Object>>) row.get("ancillaries"))
+				.stream()
 				.filter(a -> a.get("key") != null)
 				.map(a -> new Ancillary((String) a.get("key"), (String) a.get("value")))
 				.toArray(Ancillary[]::new);

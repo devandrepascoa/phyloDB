@@ -1,7 +1,9 @@
 package pt.ist.meic.phylodb.utils.db;
 
-import org.neo4j.ogm.model.Result;
-import org.neo4j.ogm.session.Session;
+import org.neo4j.driver.Driver;
+import org.neo4j.driver.Result;
+import org.neo4j.driver.types.MapAccessor;
+import org.springframework.data.neo4j.core.Neo4jTemplate;
 import pt.ist.meic.phylodb.utils.service.VersionedEntity;
 
 import java.util.List;
@@ -17,8 +19,8 @@ import java.util.stream.StreamSupport;
  */
 public abstract class BatchRepository<E extends VersionedEntity<K>, K> extends VersionedRepository<E, K> {
 
-	protected BatchRepository(Session session) {
-		super(session);
+	protected BatchRepository(Driver driver, Neo4jTemplate template) {
+		super(driver.session(), template);
 	}
 
 	/**
@@ -52,7 +54,7 @@ public abstract class BatchRepository<E extends VersionedEntity<K>, K> extends V
 		if (page < 0 || limit < 0) return Optional.empty();
 		Result result = getAll(page * limit, limit, filters);
 		if (result == null) return Optional.empty();
-		return Optional.of(StreamSupport.stream(result.spliterator(), false)
+		return Optional.of(StreamSupport.stream(result.stream().map(MapAccessor::asMap).spliterator(), false)
 				.map(this::parse)
 				.collect(Collectors.toList()));
 	}

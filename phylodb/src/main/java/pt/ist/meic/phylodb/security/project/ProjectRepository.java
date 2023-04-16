@@ -1,7 +1,9 @@
 package pt.ist.meic.phylodb.security.project;
 
-import org.neo4j.ogm.model.Result;
-import org.neo4j.ogm.session.Session;
+
+import org.neo4j.driver.Driver;
+import org.neo4j.driver.Result;
+import org.springframework.data.neo4j.core.Neo4jTemplate;
 import org.springframework.stereotype.Repository;
 import pt.ist.meic.phylodb.security.authorization.Visibility;
 import pt.ist.meic.phylodb.security.project.model.Project;
@@ -19,8 +21,8 @@ import java.util.Map;
 @Repository
 public class ProjectRepository extends VersionedRepository<Project, String> {
 
-	public ProjectRepository(Session session) {
-		super(session);
+	public ProjectRepository(Driver driver, Neo4jTemplate template) {
+		super(driver.session(), template);
 	}
 
 	@Override

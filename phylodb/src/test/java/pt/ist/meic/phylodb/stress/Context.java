@@ -1,6 +1,6 @@
 package pt.ist.meic.phylodb.stress;
 
-import org.neo4j.ogm.session.Session;
+import org.neo4j.driver.Session;
 import org.springframework.boot.SpringApplication;
 import org.springframework.context.ConfigurableApplicationContext;
 import pt.ist.meic.phylodb.PhylodbApplication;

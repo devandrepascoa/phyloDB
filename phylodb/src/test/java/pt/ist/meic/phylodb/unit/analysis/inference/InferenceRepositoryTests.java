@@ -4,7 +4,8 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.Arguments;
 import org.junit.jupiter.params.provider.MethodSource;
-import org.neo4j.ogm.model.Result;
+import org.neo4j.driver.Result;
+import org.neo4j.driver.types.MapAccessor;
 import pt.ist.meic.phylodb.unit.RepositoryTestsContext;
 import pt.ist.meic.phylodb.analysis.inference.model.Edge;
 import pt.ist.meic.phylodb.analysis.inference.model.Inference;
@@ -123,7 +124,7 @@ public class InferenceRepositoryTests extends RepositoryTestsContext {
 		List<Edge> list = new ArrayList<>();
 		String projectId = (String) row.get("projectId");
 		String datasetId = (String) row.get("datasetId");
-		for (Map<String, Object> edge: (Map<String, Object>[]) row.get("edges")) {
+		for (Map<String, Object> edge: (List<Map<String, Object>>) row.get("edges")) {
 			VersionedEntity<Profile.PrimaryKey> from = new VersionedEntity<>(new Profile.PrimaryKey(projectId, datasetId, (String) edge.get("from")), (long) edge.get("fromVersion"), (boolean) edge.get("fromDeprecated"));
 			VersionedEntity<Profile.PrimaryKey> to = new VersionedEntity<>(new Profile.PrimaryKey(projectId, datasetId, (String) edge.get("to")), (long) edge.get("toVersion"), (boolean) edge.get("toDeprecated"));
 			list.add(new Edge(from, to, Math.toIntExact((long) edge.get("distance"))));
@@ -147,7 +148,7 @@ public class InferenceRepositoryTests extends RepositoryTestsContext {
 				"ORDER BY pj.id, ds.id, size(d.id), d.id";
 		Result result = query(new Query(statement, PROJECT1.getPrimaryKey(), DATASET1.getPrimaryKey().getId()));
 		if (result == null) return new Inference[0];
-		return StreamSupport.stream(result.spliterator(), false)
+		return StreamSupport.stream(result.stream().map(MapAccessor::asMap).spliterator(), false)
 				.map(this::parse)
 				.toArray(Inference[]::new);
 	}

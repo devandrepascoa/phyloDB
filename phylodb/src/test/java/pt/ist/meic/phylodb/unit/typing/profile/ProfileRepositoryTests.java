@@ -4,7 +4,8 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.Arguments;
 import org.junit.jupiter.params.provider.MethodSource;
-import org.neo4j.ogm.model.Result;
+import org.neo4j.driver.Result;
+import org.neo4j.driver.types.MapAccessor;
 import pt.ist.meic.phylodb.unit.RepositoryTestsContext;
 import pt.ist.meic.phylodb.phylogeny.allele.model.Allele;
 import pt.ist.meic.phylodb.typing.profile.model.Profile;
@@ -271,8 +272,8 @@ public class ProfileRepositoryTests extends RepositoryTestsContext {
 	}
 
 	private Profile parse(Map<String, Object> row) {
-		Map<String, Object>[] alleles = (Map<String, Object>[]) row.get("alleles");
-		int size = Math.toIntExact((long) alleles[0].get("total"));
+		List<Map<String, Object>> alleles = (List<Map<String, Object>>) row.get("alleles");
+		int size = Math.toIntExact((long) alleles.get(0).get("total"));
 		List<VersionedEntity<Allele.PrimaryKey>> allelesReferences = new ArrayList<>(size);
 		for (int i = 0; i < size; i++)
 			allelesReferences.add(null);
@@ -302,7 +303,7 @@ public class ProfileRepositoryTests extends RepositoryTestsContext {
 				"ORDER BY pj.id, d.id, p.id, version";
 		Result result = query(new Query(statement, PROJECT1.getPrimaryKey(), DATASET1.getPrimaryKey().getId()));
 		if (result == null) return new Profile[0];
-		return StreamSupport.stream(result.spliterator(), false)
+		return StreamSupport.stream(result.stream().map(MapAccessor::asMap).spliterator(), false)
 				.map(this::parse)
 				.toArray(Profile[]::new);
 	}

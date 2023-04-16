@@ -1,6 +1,6 @@
 package pt.ist.meic.phylodb.performance;
 
-import org.neo4j.ogm.session.Session;
+import org.neo4j.driver.Session;
 import org.openjdk.jmh.annotations.*;
 import org.openjdk.jmh.profile.GCProfiler;
 import org.openjdk.jmh.runner.Runner;

@@ -4,7 +4,7 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.Arguments;
 import org.junit.jupiter.params.provider.MethodSource;
-import org.neo4j.ogm.model.Result;
+import org.neo4j.driver.Result;
 import pt.ist.meic.phylodb.unit.RepositoryTestsContext;
 import pt.ist.meic.phylodb.phylogeny.locus.model.Locus;
 import pt.ist.meic.phylodb.typing.Method;
@@ -235,7 +235,7 @@ public class SchemaRepositoryTests extends RepositoryTestsContext {
 
 	private Schema parse(Map<String, Object> row) {
 		String taxonId = (String) row.get("taxonId");
-		List<VersionedEntity<Locus.PrimaryKey>> lociIds = Arrays.stream((Map<String, Object>[]) row.get("lociIds"))
+		List<VersionedEntity<Locus.PrimaryKey>> lociIds = Arrays.stream((List<Map<String, Object>>) row.get("lociIds"))
 				.map(m -> new VersionedEntity<>(new Locus.PrimaryKey(taxonId, (String) m.get("id")), (long) m.get("version"), (boolean) m.get("deprecated")))
 				.collect(Collectors.toList());
 		return new Schema(taxonId,
@@ -257,7 +257,7 @@ public class SchemaRepositoryTests extends RepositoryTestsContext {
 				"ORDER BY t.id, s.id, version";
 		Result result = query(new Query(statement, TAXON1.getPrimaryKey()));
 		if (result == null) return new Schema[0];
-		return StreamSupport.stream(result.spliterator(), false)
+		return StreamSupport.stream(result.stream().map(MapAccessor::asMap).spliterator(), false)
 				.map(this::parse)
 				.toArray(Schema[]::new);
 	}

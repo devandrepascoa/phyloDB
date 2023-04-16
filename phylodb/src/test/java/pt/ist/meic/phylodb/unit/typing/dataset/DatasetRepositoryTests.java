@@ -4,7 +4,7 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.Arguments;
 import org.junit.jupiter.params.provider.MethodSource;
-import org.neo4j.ogm.model.Result;
+import org.neo4j.driver.Result;
 import pt.ist.meic.phylodb.unit.RepositoryTestsContext;
 import pt.ist.meic.phylodb.typing.dataset.model.Dataset;
 import pt.ist.meic.phylodb.typing.schema.model.Schema;
@@ -150,7 +150,7 @@ public class DatasetRepositoryTests extends RepositoryTestsContext {
 				"ORDER BY p.id, d.id, r1.version";
 		Result result = query(new Query(statement, PROJECT1.getPrimaryKey()));
 		if (result == null) return new Dataset[0];
-		return StreamSupport.stream(result.spliterator(), false)
+		return StreamSupport.stream(result.stream().map(MapAccessor::asMap).spliterator(), false)
 				.map(this::parse)
 				.toArray(Dataset[]::new);
 	}

@@ -1,7 +1,8 @@
 package pt.ist.meic.phylodb.phylogeny.locus;
 
-import org.neo4j.ogm.model.Result;
-import org.neo4j.ogm.session.Session;
+import org.neo4j.driver.Driver;
+import org.neo4j.driver.Result;
+import org.springframework.data.neo4j.core.Neo4jTemplate;
 import org.springframework.stereotype.Repository;
 import pt.ist.meic.phylodb.phylogeny.locus.model.Locus;
 import pt.ist.meic.phylodb.utils.db.Query;
@@ -19,8 +20,8 @@ import java.util.stream.Collectors;
 @Repository
 public class LocusRepository extends VersionedRepository<Locus, Locus.PrimaryKey> {
 
-	public LocusRepository(Session session) {
-		super(session);
+	public LocusRepository(Driver driver, Neo4jTemplate template) {
+		super(driver.session(), template);
 	}
 
 	@Override

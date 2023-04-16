@@ -1,7 +1,7 @@
 package pt.ist.meic.phylodb.unit;
 
-import org.neo4j.ogm.model.Result;
-import org.neo4j.ogm.session.Session;
+import org.neo4j.driver.Result;
+import org.neo4j.driver.Session;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.transaction.annotation.Transactional;
 import pt.ist.meic.phylodb.analysis.inference.InferenceRepository;

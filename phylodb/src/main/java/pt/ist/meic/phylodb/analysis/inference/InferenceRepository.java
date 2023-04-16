@@ -1,7 +1,8 @@
 package pt.ist.meic.phylodb.analysis.inference;
 
-import org.neo4j.ogm.model.Result;
-import org.neo4j.ogm.session.Session;
+import org.neo4j.driver.Driver;
+import org.neo4j.driver.Result;
+import org.springframework.data.neo4j.core.Neo4jTemplate;
 import org.springframework.stereotype.Repository;
 import pt.ist.meic.phylodb.analysis.inference.model.Edge;
 import pt.ist.meic.phylodb.analysis.inference.model.Inference;
@@ -22,8 +23,8 @@ import java.util.Map;
 @Repository
 public class InferenceRepository extends UnversionedRepository<Inference, Inference.PrimaryKey> {
 
-	protected InferenceRepository(Session session) {
-		super(session);
+	protected InferenceRepository(Driver driver, Neo4jTemplate template) {
+		super(driver.session(), template);
 	}
 
 	@Override
@@ -62,7 +63,7 @@ public class InferenceRepository extends UnversionedRepository<Inference, Infere
 		List<Edge> list = new ArrayList<>();
 		String projectId = row.get("projectId").toString();
 		String datasetId = row.get("datasetId").toString();
-		for (Map<String, Object> edge : (Map<String, Object>[]) row.get("edges")) {
+		for (Map<String, Object> edge : (List<Map<String, Object>>) row.get("edges")) {
 			VersionedEntity<Profile.PrimaryKey> from = new VersionedEntity<>(new Profile.PrimaryKey(projectId, datasetId, (String) edge.get("from")), (long) edge.get("fromVersion"), (boolean) edge.get("fromDeprecated"));
 			VersionedEntity<Profile.PrimaryKey> to = new VersionedEntity<>(new Profile.PrimaryKey(projectId, datasetId, (String) edge.get("to")), (long) edge.get("toVersion"), (boolean) edge.get("toDeprecated"));
 			list.add(new Edge(from, to, (long) edge.get("distance")));

@@ -5,7 +5,7 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.Arguments;
 import org.junit.jupiter.params.provider.MethodSource;
-import org.neo4j.ogm.model.Result;
+import org.neo4j.driver.Result;
 import pt.ist.meic.phylodb.unit.RepositoryTestsContext;
 import pt.ist.meic.phylodb.analysis.Analysis;
 import pt.ist.meic.phylodb.analysis.inference.model.InferenceAlgorithm;
@@ -111,7 +111,7 @@ public class JobRepositoryTests extends RepositoryTestsContext {
 				"ORDER BY size(name), name ";
 		Result result = query(new Query(statement));
 		if (result == null) return new Job[0];
-		return StreamSupport.stream(result.spliterator(), false)
+		return StreamSupport.stream(result.stream().map(MapAccessor::asMap).spliterator(), false)
 				.map(this::parse)
 				.toArray(Job[]::new);
 	}

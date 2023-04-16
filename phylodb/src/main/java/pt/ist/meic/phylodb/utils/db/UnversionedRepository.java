@@ -1,7 +1,9 @@
 package pt.ist.meic.phylodb.utils.db;
 
-import org.neo4j.ogm.model.Result;
-import org.neo4j.ogm.session.Session;
+import org.neo4j.driver.Result;
+import org.neo4j.driver.Session;
+import org.neo4j.driver.types.MapAccessor;
+import org.springframework.data.neo4j.core.Neo4jTemplate;
 import pt.ist.meic.phylodb.utils.service.Entity;
 
 import java.util.Iterator;
@@ -19,8 +21,8 @@ import java.util.stream.StreamSupport;
  */
 public abstract class UnversionedRepository<E, K> extends EntityRepository<E, K> {
 
-	protected UnversionedRepository(Session session) {
-		super(session);
+	protected UnversionedRepository(Session session, Neo4jTemplate template) {
+		super(session, template);
 	}
 
 	/**
@@ -51,7 +53,7 @@ public abstract class UnversionedRepository<E, K> extends EntityRepository<E, K>
 		if (page < 0 || limit < 0) return Optional.empty();
 		Result result = getAllEntities(page * limit, limit, filters);
 		if (result == null) return Optional.empty();
-		return Optional.of(StreamSupport.stream(result.spliterator(), false)
+		return Optional.of(StreamSupport.stream(result.stream().map(MapAccessor::asMap).spliterator(), false)
 				.map(this::parseEntity)
 				.collect(Collectors.toList()));
 	}
@@ -66,7 +68,7 @@ public abstract class UnversionedRepository<E, K> extends EntityRepository<E, K>
 		if (key == null) return Optional.empty();
 		Result result = get(key);
 		if (result == null) return Optional.empty();
-		Iterator<Map<String, Object>> it = result.iterator();
+		Iterator<Map<String, Object>> it = result.stream().map(MapAccessor::asMap).iterator();
 		return !it.hasNext() ? Optional.empty() : Optional.of(parse(it.next()));
 	}
 

@@ -3,7 +3,7 @@ package pt.ist.meic.phylodb.unit.phylogeny.taxon;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.Arguments;
 import org.junit.jupiter.params.provider.MethodSource;
-import org.neo4j.ogm.model.Result;
+import org.neo4j.driver.Result;
 import pt.ist.meic.phylodb.unit.RepositoryTestsContext;
 import pt.ist.meic.phylodb.phylogeny.taxon.model.Taxon;
 import pt.ist.meic.phylodb.utils.db.Query;
@@ -126,7 +126,7 @@ public class TaxonRepositoryTests extends RepositoryTestsContext {
 				"ORDER BY id, version";
 		Result result = query(new Query(statement));
 		if (result == null) return new Taxon[0];
-		return StreamSupport.stream(result.spliterator(), false)
+		return StreamSupport.stream(result.stream().map(MapAccessor::asMap).spliterator(), false)
 				.map(this::parse)
 				.toArray(Taxon[]::new);
 	}

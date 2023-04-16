@@ -26,8 +26,8 @@ import pt.ist.meic.phylodb.security.authorization.Visibility;
 import pt.ist.meic.phylodb.security.project.ProjectService;
 import pt.ist.meic.phylodb.security.project.model.Project;
 
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
+import jakarta.servlet.http.HttpServletRequest;
+import jakarta.servlet.http.HttpServletResponse;
 import java.util.Collections;
 import java.util.Optional;
 import java.util.stream.Stream;

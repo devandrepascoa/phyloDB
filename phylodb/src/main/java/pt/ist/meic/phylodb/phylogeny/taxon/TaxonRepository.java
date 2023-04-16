@@ -1,7 +1,8 @@
 package pt.ist.meic.phylodb.phylogeny.taxon;
 
-import org.neo4j.ogm.model.Result;
-import org.neo4j.ogm.session.Session;
+import org.neo4j.driver.Driver;
+import org.neo4j.driver.Result;
+import org.springframework.data.neo4j.core.Neo4jTemplate;
 import org.springframework.stereotype.Repository;
 import pt.ist.meic.phylodb.phylogeny.taxon.model.Taxon;
 import pt.ist.meic.phylodb.utils.db.Query;
@@ -16,8 +17,8 @@ import java.util.Map;
 @Repository
 public class TaxonRepository extends VersionedRepository<Taxon, String> {
 
-	public TaxonRepository(Session session) {
-		super(session);
+	public TaxonRepository(Driver driver, Neo4jTemplate template) {
+		super(driver.session(), template);
 	}
 
 	@Override

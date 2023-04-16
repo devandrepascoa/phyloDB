@@ -1,7 +1,10 @@
 package pt.ist.meic.phylodb.phylogeny.allele;
 
-import org.neo4j.ogm.model.Result;
-import org.neo4j.ogm.session.Session;
+import org.neo4j.driver.Driver;
+import org.neo4j.driver.Result;
+import org.neo4j.driver.Session;
+import org.neo4j.driver.types.MapAccessor;
+import org.springframework.data.neo4j.core.Neo4jTemplate;
 import org.springframework.stereotype.Repository;
 import pt.ist.meic.phylodb.phylogeny.allele.model.Allele;
 import pt.ist.meic.phylodb.utils.db.BatchRepository;
@@ -17,8 +20,8 @@ import java.util.stream.StreamSupport;
 @Repository
 public class AlleleRepository extends BatchRepository<Allele, Allele.PrimaryKey> {
 
-	public AlleleRepository(Session session) {
-		super(session);
+	public AlleleRepository(Driver driver, Neo4jTemplate template) {
+		super(driver, template);
 	}
 
 	@Override
@@ -156,7 +159,7 @@ public class AlleleRepository extends BatchRepository<Allele, Allele.PrimaryKey>
 				})
 				.toArray())
 		);
-		Iterator<Map<String, Object>> it = result.iterator();
+		Iterator<Map<String, Object>> it = result.stream().map(MapAccessor::asMap).iterator();
 		if (!it.hasNext())
 			return true;
 		return StreamSupport.stream(Spliterators.spliteratorUnknownSize(it, Spliterator.ORDERED), false)

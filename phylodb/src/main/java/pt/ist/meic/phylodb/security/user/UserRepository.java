@@ -1,7 +1,8 @@
 package pt.ist.meic.phylodb.security.user;
 
-import org.neo4j.ogm.model.Result;
-import org.neo4j.ogm.session.Session;
+import org.neo4j.driver.Driver;
+import org.neo4j.driver.Result;
+import org.springframework.data.neo4j.core.Neo4jTemplate;
 import org.springframework.stereotype.Repository;
 import pt.ist.meic.phylodb.security.authorization.Role;
 import pt.ist.meic.phylodb.security.user.model.User;
@@ -21,8 +22,8 @@ import java.util.stream.Collectors;
 @Repository
 public class UserRepository extends VersionedRepository<User, User.PrimaryKey> {
 
-	public UserRepository(Session session) {
-		super(session);
+	public UserRepository(Driver driver, Neo4jTemplate template) {
+		super(driver.session(), template);
 	}
 
 	@Override

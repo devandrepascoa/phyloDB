@@ -1,7 +1,8 @@
 package pt.ist.meic.phylodb.utils.db;
 
-import org.neo4j.ogm.model.Result;
-import org.neo4j.ogm.session.Session;
+import org.neo4j.driver.Result;
+import org.neo4j.driver.Session;
+import org.springframework.data.neo4j.core.Neo4jTemplate;
 import pt.ist.meic.phylodb.utils.service.Entity;
 
 import java.util.Map;
@@ -14,8 +15,8 @@ import java.util.Map;
  */
 public abstract class EntityRepository<E, K> extends Repository {
 
-	protected EntityRepository(Session session) {
-		super(session);
+	protected EntityRepository(Session session, Neo4jTemplate template) {
+		super(session, template);
 	}
 
 	/**
