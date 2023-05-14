@@ -14,6 +14,7 @@ import pt.ist.meic.phylodb.utils.db.Query;
 import pt.ist.meic.phylodb.utils.db.VersionedRepository;
 import pt.ist.meic.phylodb.utils.service.VersionedEntity;
 
+import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
 import java.util.Optional;
@@ -126,9 +127,10 @@ public class SchemaRepository extends VersionedRepository<Schema, Schema.Primary
                 "RETURN t.id as taxonId, s.id as id, s.deprecated as deprecated, r.version as version,\n" +
                 "s.type as type, sd.description as description, lociIds");
         Result result = query(query);
-        if (!result.stream().map(MapAccessor::asMap).iterator().hasNext())
+        Iterator<Map<String, Object>> iterator = result.stream().map(MapAccessor::asMap).iterator();
+        if (!iterator.hasNext())
             return Optional.empty();
-        return Optional.of(parse(result.stream().map(MapAccessor::asMap).iterator().next()));
+        return Optional.of(parse(iterator.next()));
     }
 
     /**
@@ -148,9 +150,10 @@ public class SchemaRepository extends VersionedRepository<Schema, Schema.Primary
                 "RETURN t.id as taxonId, s.id as id, s.deprecated as deprecated, r2.version as version,\n" +
                 "s.type as type, sd.description as description, lociIds";
         Result result = query(new Query(statement, key.getProjectId(), key.getId()));
-        if (!result.stream().map(MapAccessor::asMap).iterator().hasNext())
+        Iterator<Map<String, Object>> iterator = result.stream().map(MapAccessor::asMap).iterator();
+        if (!iterator.hasNext())
             return Optional.empty();
-        return Optional.of(parse(result.stream().map(MapAccessor::asMap).iterator().next()));
+        return Optional.of(parse(iterator.next()));
     }
 
     private void post(Schema schema) {

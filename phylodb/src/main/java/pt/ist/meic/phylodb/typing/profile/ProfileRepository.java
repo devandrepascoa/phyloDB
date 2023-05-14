@@ -71,8 +71,8 @@ public class ProfileRepository extends BatchRepository<Profile, Profile.PrimaryK
 
 	@Override
 	protected Profile parse(Map<String, Object> row) {
-		Map<String, Object>[] alleles = (Map<String, Object>[]) row.get("alleles");
-		int size = Math.toIntExact((long) alleles[0].get("total"));
+		List<Map<String, Object>> alleles = (List<Map<String, Object>>) row.get("alleles");
+		int size = Math.toIntExact((long) alleles.get(0).get("total"));
 		List<VersionedEntity<Allele.PrimaryKey>> allelesReferences = new ArrayList<>(size);
 		for (int i = 0; i < size; i++)
 			allelesReferences.add(null);
