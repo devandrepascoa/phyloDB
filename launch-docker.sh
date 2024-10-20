@@ -8,7 +8,7 @@ pushd "$PROJ_ROOT"  # cd current directory
 
 cd "instance1"
 #USER=$(id -u):$(id -g) DB_PATH=$HOME/instance1/db APP_PATH=$HOME/instance1/app docker-compose up -d
-USER=$(id -u):$(id -g) DB_PATH=$PROJ_ROOT/instance1/db APP_PATH=$PROJ_ROOT/instance1/app docker-compose up -d
+USER=$(id -u):$(id -g) DB_PATH=$PROJ_ROOT/instance1/db APP_PATH=$PROJ_ROOT/instance1/app docker compose up -d
 
 # Create a session within the running Docker container.
 
