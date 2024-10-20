@@ -2,7 +2,7 @@
 
 # Move into current script's directory.
 PROJ_ROOT="$(dirname "$(readlink -f "${BASH_SOURCE[0]}")")"
-pushd "$PROJ_ROOT"  # cd current directory
+cd "$PROJ_ROOT"  # cd current directory
 
 # Built the solution JAR files if necessary.
 echo ""
@@ -98,8 +98,5 @@ cd "$PROJ_ROOT/phylodb"
 docker build -t phylodb .
 
 # Change back to original group ID.
-newgrp
-cd ..
+cd "$PROJ_ROOT"
 
-# Return to the initial directory.
-popd
